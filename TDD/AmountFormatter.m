@@ -16,7 +16,7 @@
 
 
 
--(NSString*)formatAmountForRegion:(NSString*)amountString {
+-(NSString*)formatAmountForRegionWithLang:(NSString*)amountString  withLang: (languageNames)lang {
     
     double convertedDouble = [amountString doubleValue];
     
