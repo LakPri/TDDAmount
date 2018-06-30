@@ -17,6 +17,14 @@
 
 
 -(NSString*)formatAmountForRegion:(NSString*)amountString {
+    
+    double convertedDouble = [amountString doubleValue];
+    
+    NSString *stringVal = [NSString stringWithFormat:@"%.2f", convertedDouble];
+    
+    amountString = stringVal;
+    
+    
 
     if([amountString containsString:@"."]){
         amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
@@ -24,7 +32,7 @@
         amountString = [amountString stringByAppendingString: @","];
     }
     
-    return [NSString stringWithFormat:@"%@00",amountString];
+    return amountString;
     
     
     //Parser Input
