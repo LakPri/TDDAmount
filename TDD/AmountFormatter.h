@@ -15,5 +15,5 @@ typedef enum{
 } languageNames;
 
 @interface AmountFormatter : NSObject
--(NSString*)formatAmountForRegion:(NSString*)amountString currentRegion:(languageNames) languageNames;
+-(NSString*)formatAmountForRegion:(NSString*)amountString;
 @end

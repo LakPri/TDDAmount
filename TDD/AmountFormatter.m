@@ -16,36 +16,13 @@
 
 
 
--(NSString*)formatAmountForRegion:(NSString*)amountString currentRegion:(languageNames) languageNames{
-    
-    
-    switch (languageNames) {
-    case en:
-        self.separator = @"$1,";
-        break;
-    case fr:
-        self.separator = @"$1 ";
-        amountString = [amountString stringByReplacingOccurrencesOfString:@"."
-                                                          withString:@","];
-            
-        break;
-    case nl:
-        self.separator = @"$1.";
-        amountString = [amountString stringByReplacingOccurrencesOfString:@"."
-                                                                   withString:@","];
-        break;
-    case de:
-        self.separator = @"$1.";
-        amountString = [amountString stringByReplacingOccurrencesOfString:@"."
-                                                                   withString:@","];
-        
-        break;
-        
-    }
+-(NSString*)formatAmountForRegion:(NSString*)amountString {
+
+    return [NSString stringWithFormat:@"%@,00",amountString];
     
     //Parser Input
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d)(?=(\\d{3})+(?!\\d))"
+   /* NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d)(?=(\\d{3})+(?!\\d))"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:nil];
     
@@ -54,7 +31,7 @@
                                                                  range:NSMakeRange(0, [amountString length])
                                                           withTemplate:self.separator];
     
-    return modifiedString;
+    return modifiedString;*/
 
     
     

@@ -40,9 +40,31 @@
     
     AmountFormatter *formatter = [[AmountFormatter alloc]init];
     
-    NSString *givenValue = [formatter formatAmountForRegion:@"1.00" currentRegion:nl];
+    NSString *givenValue = [formatter formatAmountForRegion:@"1"];
     
     NSString *expectedValue = @"1,00";
+    
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+}
+-(void)testShouldDisplay12comma00WhenGivingInput12{
+    
+    
+    AmountFormatter *formatter = [[AmountFormatter alloc]init];
+    
+    NSString *givenValue = [formatter formatAmountForRegion:@"12"];
+    
+    NSString *expectedValue = @"12,00";
+    
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+}
+-(void)testShouldDisplay12comma00WhenGivingInput12dot{
+    
+    
+    AmountFormatter *formatter = [[AmountFormatter alloc]init];
+    
+    NSString *givenValue = [formatter formatAmountForRegion:@"12."];
+    
+    NSString *expectedValue = @"12,00";
     
     XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
 }
