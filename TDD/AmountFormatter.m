@@ -18,7 +18,14 @@
 
 -(NSString*)formatAmountForRegion:(NSString*)amountString {
 
-    return [NSString stringWithFormat:@"%@,00",amountString];
+    if([amountString containsString:@"."]){
+        amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
+    }else{
+        amountString = [amountString stringByAppendingString: @","];
+    }
+    
+    return [NSString stringWithFormat:@"%@00",amountString];
+    
     
     //Parser Input
     
