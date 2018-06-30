@@ -9,13 +9,14 @@
 #import <XCTest/XCTest.h>
 #import "AmountFormatter.h"
 @interface TDDTests : XCTestCase
-
+@property (nonatomic, strong) AmountFormatter *amountFormatter;
 @end
 
 @implementation TDDTests
 
 - (void)setUp {
     [super setUp];
+     self.amountFormatter = [[AmountFormatter alloc]init];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -38,9 +39,8 @@
 -(void)testShouldDisplay1comma00WhenGivingInput1{
     
     
-    AmountFormatter *formatter = [[AmountFormatter alloc]init];
     
-    NSString *givenValue = [formatter formatAmountForRegion:@"1"];
+    NSString *givenValue = [self.amountFormatter formatAmountForRegion:@"1"];
     
     NSString *expectedValue = @"1,00";
     
@@ -49,9 +49,7 @@
 -(void)testShouldDisplay12comma00WhenGivingInput12{
     
     
-    AmountFormatter *formatter = [[AmountFormatter alloc]init];
-    
-    NSString *givenValue = [formatter formatAmountForRegion:@"12"];
+    NSString *givenValue = [self.amountFormatter formatAmountForRegion:@"12"];
     
     NSString *expectedValue = @"12,00";
     
@@ -60,34 +58,32 @@
 -(void)testShouldDisplay12comma00WhenGivingInput12dot{
     
     
-    AmountFormatter *formatter = [[AmountFormatter alloc]init];
-    
-    NSString *givenValue = [formatter formatAmountForRegion:@"12."];
-    
     NSString *expectedValue = @"12,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12.")]], @"istrue");
 }
 -(void)testShouldDisplay12comma30WhenGivingInput12dot3{
-    AmountFormatter *formatter = [[AmountFormatter alloc]init];
-    
-    NSString *givenValue = [formatter formatAmountForRegion:@"12.3"];
-    
-    NSLog(@"given:%@",givenValue);
-    
+  
     NSString *expectedValue = @"12,30";
     
-    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12,3")]], @"istrue");
 }
 -(void)testShouldDisplay12comma35WhenGivingInput12dot35{
-    AmountFormatter *formatter = [[AmountFormatter alloc]init];
-    
-    NSString *givenValue = [formatter formatAmountForRegion:@"12.35"];
-    
-    NSLog(@"given:%@",givenValue);
     
     NSString *expectedValue = @"12,35";
     
-    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12,35")]], @"istrue");
 }
+-(void)testShouldDisplay1dot234comma00WhenGivingInput1234{
+    
+    
+    NSString *expectedValue = @"1.234,00";
+    
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"1234")]], @"istrue");
+}
+
+-(NSString*)shouldReturnFormattedAmount:(NSString*)givenAmount{
+    return [self.amountFormatter formatAmountForRegion:givenAmount];
+}
+
 @end

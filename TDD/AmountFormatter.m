@@ -23,14 +23,18 @@
     NSString *stringVal = [NSString stringWithFormat:@"%.2f", convertedDouble];
     
     amountString = stringVal;
+
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d)(?=(\\d{3})+(?!\\d))"                options:NSRegularExpressionCaseInsensitive                  error:nil];
+    
+    amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
+    
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:amountString options:0  range:NSMakeRange(0, [amountString length])
+                                                          withTemplate:@"$1."];
     
     
 
-    
-        amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
-    
-    
-    return amountString;
+    return modifiedString;
     
     
     //Parser Input
