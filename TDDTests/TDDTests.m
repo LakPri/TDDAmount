@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "AmountFormatter.h"
 @interface TDDTests : XCTestCase
 
 @end
@@ -35,5 +35,15 @@
         // Put the code you want to measure the time of here.
     }];
 }
-
+-(void)testShouldDisplay1comma00WhenGivingInput1{
+    
+    
+    AmountFormatter *formatter = [[AmountFormatter alloc]init];
+    
+    NSString *givenValue = [formatter formatAmountForRegion:@"1.00" currentRegion:nl];
+    
+    NSString *expectedValue = @"1,00";
+    
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+}
 @end

@@ -15,6 +15,8 @@
 		40002FD120E7F7BD00C7A2F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40002FD020E7F7BD00C7A2F6 /* main.m */; };
 		40002FDB20E7F7BD00C7A2F6 /* TDDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40002FDA20E7F7BD00C7A2F6 /* TDDTests.m */; };
 		40002FE620E7F7BD00C7A2F6 /* TDDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40002FE520E7F7BD00C7A2F6 /* TDDUITests.m */; };
+		40002FF520E7F90900C7A2F6 /* AmountFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40002FF420E7F90900C7A2F6 /* AmountFormatter.m */; };
+		40002FF620E7F90900C7A2F6 /* AmountFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40002FF420E7F90900C7A2F6 /* AmountFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		40002FE120E7F7BD00C7A2F6 /* TDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40002FE520E7F7BD00C7A2F6 /* TDDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDDUITests.m; sourceTree = "<group>"; };
 		40002FE720E7F7BD00C7A2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40002FF320E7F90900C7A2F6 /* AmountFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountFormatter.h; sourceTree = "<group>"; };
+		40002FF420E7F90900C7A2F6 /* AmountFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				40002FCC20E7F7BD00C7A2F6 /* LaunchScreen.storyboard */,
 				40002FCF20E7F7BD00C7A2F6 /* Info.plist */,
 				40002FD020E7F7BD00C7A2F6 /* main.m */,
+				40002FF320E7F90900C7A2F6 /* AmountFormatter.h */,
+				40002FF420E7F90900C7A2F6 /* AmountFormatter.m */,
 			);
 			path = TDD;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40002FF520E7F90900C7A2F6 /* AmountFormatter.m in Sources */,
 				40002FC620E7F7BC00C7A2F6 /* ViewController.m in Sources */,
 				40002FD120E7F7BD00C7A2F6 /* main.m in Sources */,
 				40002FC320E7F7BC00C7A2F6 /* AppDelegate.m in Sources */,
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40002FF620E7F90900C7A2F6 /* AmountFormatter.m in Sources */,
 				40002FDB20E7F7BD00C7A2F6 /* TDDTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
