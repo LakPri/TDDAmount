@@ -26,11 +26,9 @@
     
     
 
-    if([amountString containsString:@"."]){
+    
         amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
-    }else{
-        amountString = [amountString stringByAppendingString: @","];
-    }
+    
     
     return amountString;
     

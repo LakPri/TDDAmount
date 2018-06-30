@@ -79,4 +79,15 @@
     
     XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
 }
+-(void)testShouldDisplay12comma35WhenGivingInput12dot35{
+    AmountFormatter *formatter = [[AmountFormatter alloc]init];
+    
+    NSString *givenValue = [formatter formatAmountForRegion:@"12.35"];
+    
+    NSLog(@"given:%@",givenValue);
+    
+    NSString *expectedValue = @"12,35";
+    
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
+}
 @end
