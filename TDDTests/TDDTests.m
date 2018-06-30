@@ -58,21 +58,32 @@
 -(void)testShouldDisplay12comma00WhenGivingInput12dot{
     
     
+    
+    NSString *givenValue = [self.amountFormatter formatAmountForRegion:@"12."];
+    
     NSString *expectedValue = @"12,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12.")]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
 }
 -(void)testShouldDisplay12comma30WhenGivingInput12dot3{
-  
+    
+    NSString *givenValue = [self.amountFormatter formatAmountForRegion:@"12.3"];
+    
+    NSLog(@"given:%@",givenValue);
+    
     NSString *expectedValue = @"12,30";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12,3")]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
 }
 -(void)testShouldDisplay12comma35WhenGivingInput12dot35{
     
+    NSString *givenValue = [self.amountFormatter formatAmountForRegion:@"12.35"];
+    
+    NSLog(@"given:%@",givenValue);
+    
     NSString *expectedValue = @"12,35";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmount:(@"12,35")]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:givenValue], @"istrue");
 }
 -(void)testShouldDisplay1dot234comma00WhenGivingInput1234{
     
