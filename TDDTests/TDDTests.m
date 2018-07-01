@@ -81,6 +81,14 @@
     XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"1234"]], @"istrue");
 }
 
+//-(void)testShouldDisplay1Dot00WhenGivingInput1InEnglishFormatting{
+//    NSString *expectedValue = @"1.00";
+//
+//    NSString *actualValue = [self.amountFormatter formatAmountForRegionWithLang:@"1"];
+//
+//    XCTAssertTrue([expectedValue isEqualToString:actualValue], @"istrue");
+//}
+
 
 -(NSString*)shouldReturnFormattedAmountWithLang:(NSString*)givenAmount {
     return [self.amountFormatter formatAmountForRegionWithLang:givenAmount ];

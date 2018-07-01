@@ -16,15 +16,17 @@
 
 
 
--(NSString*)formatAmountForRegionWithLang:(NSString*)amountString {
-    
+- (NSString*)getAmountInDoubleFormatWith2Decimal:(NSString *)amountString {
     double convertedDouble = [amountString doubleValue];
     
-    NSString *stringVal = [NSString stringWithFormat:@"%.2f", convertedDouble];
-    
-    amountString = stringVal;
+    NSString *stringVal = [NSString stringWithFormat:@"%.2f", convertedDouble];    
+    return stringVal;
+}
 
+-(NSString*)formatAmountForRegionWithLang:(NSString*)amountString {
     
+    amountString = [self getAmountInDoubleFormatWith2Decimal:amountString];
+
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d)(?=(\\d{3})+(?!\\d))"                options:NSRegularExpressionCaseInsensitive                  error:nil];
     
     amountString = [amountString stringByReplacingOccurrencesOfString:@"." withString:@","];
