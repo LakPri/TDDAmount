@@ -42,7 +42,7 @@
     
     NSString *expectedValue = @"1,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"1" WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"1"]], @"istrue");
 }
 -(void)testShouldDisplay12comma00WhenGivingInput12{
     
@@ -50,7 +50,7 @@
     
     NSString *expectedValue = @"12,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12" WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12"]], @"istrue");
 }
 -(void)testShouldDisplay12comma00WhenGivingInput12dot{
     
@@ -58,32 +58,32 @@
     
     NSString *expectedValue = @"12,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12." WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12."]], @"istrue");
 }
 -(void)testShouldDisplay12comma30WhenGivingInput12dot3{
  
     NSString *expectedValue = @"12,30";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12.3" WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12.3"]], @"istrue");
 }
 -(void)testShouldDisplay12comma35WhenGivingInput12dot35{
     
   
     NSString *expectedValue = @"12,35";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12.35" WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"12.35"]], @"istrue");
 }
 -(void)testShouldDisplay1dot234comma00WhenGivingInput1234{
     
     
     NSString *expectedValue = @"1.234,00";
     
-    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"1234" WithLang: nl]], @"istrue");
+    XCTAssertTrue([expectedValue isEqualToString:[self shouldReturnFormattedAmountWithLang:@"1234"]], @"istrue");
 }
 
 
--(NSString*)shouldReturnFormattedAmountWithLang:(NSString*)givenAmount WithLang: (languageNames)lang{
-    return [self.amountFormatter formatAmountForRegionWithLang:givenAmount withLang:lang];
+-(NSString*)shouldReturnFormattedAmountWithLang:(NSString*)givenAmount {
+    return [self.amountFormatter formatAmountForRegionWithLang:givenAmount ];
 }
 
 @end

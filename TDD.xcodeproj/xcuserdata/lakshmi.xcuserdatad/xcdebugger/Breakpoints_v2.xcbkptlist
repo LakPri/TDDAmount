@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TDD/AmountFormatter.m"
+            timestampString = "552161405.526198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-formatAmountForRegionWithLang:withLang:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AmountFormatter formatAmountForRegion:]"
+                  moduleName = "TDD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lakshmi/Library/Autosave%20Information/TDD/TDD/AmountFormatter.m"
+                  timestampString = "552080777.925199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AmountFormatter formatAmountForRegion:]"
+                  moduleName = "TDDTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lakshmi/Library/Autosave%20Information/TDD/TDD/AmountFormatter.m"
+                  timestampString = "552080778.650417"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TDD/AmountFormatter.m"
+            timestampString = "552161405.5263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-formatAmountForRegionWithLang:withLang:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AmountFormatter formatAmountForRegion:]"
+                  moduleName = "TDD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lakshmi/Library/Autosave%20Information/TDD/TDD/AmountFormatter.m"
+                  timestampString = "552080777.940848"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AmountFormatter formatAmountForRegion:]"
+                  moduleName = "TDDTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lakshmi/Library/Autosave%20Information/TDD/TDD/AmountFormatter.m"
+                  timestampString = "552080778.656008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "438">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
